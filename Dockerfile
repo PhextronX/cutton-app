@@ -1,18 +1,19 @@
-# ใช้ Node.js image
 FROM node:18
 
-# สร้าง working directory
+# Create app directory inside container
 WORKDIR /app
 
-# คัดลอกไฟล์ package.json และติดตั้ง dependencies
+# Copy package.json and package-lock.json
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
 
-# คัดลอก source code
+# Copy rest of the app files
 COPY . .
 
-# เปิดพอร์ต 3000
+# Expose port 3000
 EXPOSE 3000
 
-# คำสั่งรันแอป
+# Run the app
 CMD ["npm", "start"]
