@@ -1,7 +1,7 @@
 ## Run Localhost
 ```sh
 npm install express
-npm run server.js
+node run server.js
 ```
 
 ## Run On Docker
