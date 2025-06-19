@@ -1,0 +1,99 @@
+/* พื้นฐาน */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container-fluid,
+.row {
+  height: 100%;
+  margin: 0;
+}
+
+/* ฝั่งซ้าย */
+.left {
+  background-color: #f8f9fa;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  width: 816px;
+  height: 1076px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  margin: auto;
+}
+
+/* ปรับให้ col-md-6 ไม่บังคับความกว้างของ Bootstrap */
+.col-md-6.left {
+  flex: 0 0 auto;
+  max-width: none;
+}
+
+/* ฝั่งขวา */
+.right {
+  background: url('/img/shirts.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  width: 816px;
+  height: 1020px;
+  margin: 10px;
+  /* เพิ่มช่องว่างรอบด้าน 10px */
+  box-sizing: border-box;
+  /* รวม padding/margin กับขนาด */
+}
+
+
+/* ปรับให้ col-md-6 ไม่บังคับความกว้างของ Bootstrap */
+.col-md-6.right {
+  flex: 0 0 auto;
+  max-width: none;
+}
+
+/* ปุ่ม login ให้เต็มความกว้าง */
+.login {
+  width: 100%;
+}
+
+/* ตัวแบ่ง OR */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #888;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider::before {
+  margin-right: 0.75em;
+}
+
+.divider::after {
+  margin-left: 0.75em;
+}
+
+/* ปุ่ม social login */
+.social-login button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* ลิงก์ไม่ให้มีเส้นใต้ */
+a {
+  text-decoration: none;
+}
+
+.container-right-wrapper {
+  padding: 10px;
+  box-sizing: border-box;
+}
